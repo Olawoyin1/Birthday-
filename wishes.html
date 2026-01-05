@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes - Make a Wish</title>
+    <link rel="stylesheet" href="wishes-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Fredoka+One:wght@400&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background particles -->
+    <div class="particles-container" id="particles-container"></div>
+    
+    <!-- Main slideshow container -->
+    <div class="slideshow-page" id="slideshow-page">
+        <div class="slideshow-header">
+            <h1 class="slideshow-title" id="slideshow-title">🌟 Your Wishes Have Come True! 💫</h1>
+        </div>
+        
+        <div class="slides-wrapper" id="slides-wrapper">
+            <!-- Slides will be generated dynamically -->
+        </div>
+        
+        <div class="slideshow-controls">
+            <button class="slide-btn prev-btn" id="prev-btn">‹</button>
+            <div class="slide-indicators" id="slide-indicators">
+                <!-- Indicators will be generated dynamically -->
+            </div>
+            <button class="slide-btn next-btn" id="next-btn">›</button>
+        </div>
+        
+        <div class="navigation-buttons">
+            <button class="nav-btn back-btn" id="back-btn" onclick="goBack()">
+                🎂 Back to Cake
+            </button>
+            <button class="nav-btn restart-btn" id="restart-btn" onclick="restartSlideshow()">
+                🔄 Restart Slideshow
+            </button>
+        </div>
+    </div>
+    
+    <!-- Celebration confetti -->
+    <div class="confetti-container" id="confetti-container"></div>
+    
+    <script type="module" src="js/wishes-app.js"></script>
+</body>
+</html>

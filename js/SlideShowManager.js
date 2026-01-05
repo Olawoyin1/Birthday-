@@ -165,13 +165,8 @@ class SlideShowManager {
                 };
                 
                 img.onerror = () => {
-                    // Create a beautiful placeholder if image fails to load
-                    imageContainer.innerHTML = `
-                        <div class="image-placeholder">
-                            <div class="placeholder-icon">🎂</div>
-                            <div class="placeholder-text">Birthday Memories</div>
-                        </div>
-                    `;
+                    // Hide image container if it fails to load
+                    imageContainer.style.display = 'none';
                 };
                 
                 imageContainer.appendChild(img);

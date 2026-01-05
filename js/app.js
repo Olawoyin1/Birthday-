@@ -183,14 +183,16 @@ class App {
         this.animationManager.showCelebrationEffects();
         this.particleSystem.createConfetti(150, 4000);
         
-        // Set up and show wishes slideshow
+        // Store wishes data and navigate to wishes page
         setTimeout(() => {
-            console.log('Setting up slideshow with wishes:', this.wishesData);
-            this.slideShowManager.setSlides(this.wishesData, '🌟 Your Wishes Have Come True! 💫');
-            console.log('Showing slideshow...');
-            this.slideShowManager.show(false); // No autoplay - manual navigation
-            this.particleSystem.createFloatingHearts(25);
-        }, 1500);
+            console.log('Storing wishes data and navigating to wishes page...');
+            
+            // Store wishes data in localStorage
+            localStorage.setItem('birthdayWishes', JSON.stringify(this.wishesData));
+            
+            // Navigate to wishes page
+            window.location.href = 'wishes.html';
+        }, 2000); // Give time for celebration effects
     }
 
     // Public methods for testing

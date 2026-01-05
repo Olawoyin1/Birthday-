@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Wish</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Fredoka+One:wght@400&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background particles -->
+    <div class="particles-container" id="particles-container"></div>
+    
+    <div class="app-container" id="app-container">
+        <!-- Header with modern design -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="main-title" id="main-title">
+                    <span class="title-emoji">✨</span>
+                    <span class="title-text">Make a Wish</span>
+                    <!-- <span class="title-emoji">✨</span> -->
+                </h1>
+                <p class="instruction-text" id="instruction-text">
+                    Blow into your microphone to make your wishes come true!
+                </p>
+            </div>
+        </header>
+        
+        <!-- Main cake section -->
+        <main class="cake-section">
+            <div class="cake-container" id="cake-container">
+                <div class="cake" id="cake">
+                    <!-- Cake layers -->
+                    <div class="cake-layer cake-bottom"></div>
+                    <div class="cake-layer cake-middle"></div>
+                    <div class="cake-layer cake-top"></div>
+                    
+                    <!-- Cake decorations -->
+                    <div class="cake-decorations">
+                        <div class="decoration decoration-1"></div>
+                        <div class="decoration decoration-2"></div>
+                        <div class="decoration decoration-3"></div>
+                    </div>
+                    
+                    <!-- Candles container -->
+                    <div class="candles-container" id="candles-container">
+                        <!-- Candles will be generated here -->
+                    </div>
+                </div>
+                
+                <!-- Floating elements around cake -->
+                <div class="floating-elements" id="floating-elements">
+                    <div class="floating-star">⭐</div>
+                    <div class="floating-heart">💖</div>
+                    <div class="floating-balloon">🎈</div>
+                    <div class="floating-gift">🎁</div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Controls and feedback -->
+        <div class="controls-section">
+            <div class="fallback-controls" id="fallback-controls" style="display: none;">
+                <div class="control-card">
+                    <div class="control-icon">👆</div>
+                    <p>Tap on candles to make your wishes come true!</p>
+                </div>
+            </div>
+            
+            <div class="progress-container" id="progress-container">
+                <div class="progress-card">
+                    <div class="progress-icon">✨</div>
+                    <div class="progress-text">
+                        Blow out the candles to see your wishes!
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Blow feedback indicator -->
+        <div class="blow-feedback" id="blow-feedback" style="display: none;">
+            <div class="blow-indicator">
+                <div class="blow-wave"></div>
+                <div class="blow-wave"></div>
+                <div class="blow-wave"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Birthday Message Slideshow -->
+    <div class="slideshow-overlay" id="slideshow-overlay">
+        <div class="slideshow-container" id="slideshow-container">
+            <div class="slideshow-header">
+                <h2 class="slideshow-title">� Your Wishes Have Come True! 💫</h2>
+            </div>
+            
+            <div class="slides-wrapper" id="slides-wrapper">
+                <!-- Slides will be generated dynamically -->
+            </div>
+            
+            <div class="slideshow-controls">
+                <button class="slide-btn prev-btn" id="prev-btn">‹</button>
+                <div class="slide-indicators" id="slide-indicators">
+                    <!-- Indicators will be generated dynamically -->
+                </div>
+                <button class="slide-btn next-btn" id="next-btn">›</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Celebration confetti -->
+    <div class="confetti-container" id="confetti-container"></div>
+    
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

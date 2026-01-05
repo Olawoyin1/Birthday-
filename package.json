@@ -1,0 +1,32 @@
+{
+  "name": "make-a-wish",
+  "version": "1.0.0",
+  "description": "Interactive wish-making experience with magical candles",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "jest --watch",
+    "test:pbt": "jest --testNamePattern=\"Property\" --run"
+  },
+  "keywords": ["wishes", "magic", "interactive", "web", "framer-motion"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "framer-motion": "^11.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^29.0.0",
+    "fast-check": "^3.0.0",
+    "live-server": "^1.2.2"
+  },
+  "type": "module",
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["<rootDir>/jest.setup.js"],
+    "moduleFileExtensions": ["js", "json"],
+    "testMatch": ["**/__tests__/**/*.js", "**/?(*.)+(spec|test).js"],
+    "transform": {}
+  }
+}
